@@ -47,7 +47,7 @@ public class GUI {
         frame.setVisible(true);
     }
 
-    public GUI(double entropie, double lungimeMedie, double eficenta, double redundanta) {
+    public GUI(double entropie, double lungimeMedie, double eficenta, double redundanta, int total) {
         // aici afisez entropia
         // verificarea Teoremei Shannon
         // H(A)
@@ -76,6 +76,8 @@ public class GUI {
         label6.setFont(new Font("Serif", BOLD,40));
         JLabel label7 = new JLabel(" Teorema I a lui Shannon este verificata ", SwingConstants.CENTER);
         label7.setFont(new Font("Serif", BOLD,40));
+        JLabel label8 = new JLabel("Numarul total de caractere = " + total, SwingConstants.CENTER);
+        label8.setFont(new Font("Serif", BOLD,40));
 
 
         panel.add(label1);
@@ -85,6 +87,7 @@ public class GUI {
         panel.add(label5);
         panel.add(label6);
         panel.add(label7);
+        panel.add(label8);
 
         frame1.add(panel);
         // Frame Size

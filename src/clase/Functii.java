@@ -17,8 +17,8 @@ public class Functii {
     public final char[] alfabet = {'a', 'ă', 'â', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'î', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 'ș', 't', 'ț', 'u', 'v', 'w', 'x', 'y', 'z'};
     //Map care contine literele impreuna cu frecventele
     public Map<Character, Integer> literaFrecventa;
-    public int[] frecventaVector = new int[31]; //vectorul cu frecvente
-    public double[] probabilitateVector = new double[31]; //vectorul cu probabilitati
+    public int[] frecventaVector = new int[alfabet.length]; //vectorul cu frecvente
+    public double[] probabilitateVector = new double[alfabet.length]; //vectorul cu probabilitati
     public double entropie;
     public double lungimeMedie;
     public double eficienta;
@@ -44,9 +44,11 @@ public class Functii {
             if (!Character.isLetter(pozitie)) {
                 continue;
             }
-            literaFrecventa.put(sursa.charAt(i), literaFrecventa.get(sursa.charAt(i)) + 1);
+
+            literaFrecventa.put(sursa.charAt(i), literaFrecventa.getOrDefault(sursa.charAt(i),0) + 1);
         }
     }
+
     //functia care citeste si introduce text intr-un String pentru a fi folosit de encode/decode
     public String citireSiProcesareText(File file) throws FileNotFoundException {
         Scanner scr = new Scanner(file);
