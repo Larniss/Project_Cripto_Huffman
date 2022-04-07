@@ -1,1 +1,2 @@
 Project_Cripto_Huffman
+The project counts the frequency of the letters of the Romanian alphabet from two given texts (Baltagul and Law 95) and calculates the probability of occurrence, entropy, average length of code, efficiency and redundancy. After calculating all frequencies and probabilities, Huffman codes are formed. With the help of these codes we can encode and decode a text received from the keyboard. The data listed above is displayed using Jframe.
